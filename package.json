@@ -5,10 +5,10 @@
   "scripts": {
     "install": "node ./bin/www &",
     "start": "node ./bin/www",
+    "test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec ./test/*",
     "test-mocha": "./node_modules/mocha/bin/mocha ./test/*",
-    "test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec ./test/*"
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
-  "after_script": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
   "engines": {
     "node": "0.12.x",
     "npm": "2.12.x"
@@ -27,4 +27,3 @@
     "mocha": "2.0.0"
   }
 }
-
