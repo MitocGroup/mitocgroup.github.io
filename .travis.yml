@@ -17,3 +17,6 @@ branches:
     - stage
     - test
     - dev
+
+after_success:
+  - npm run coveralls
