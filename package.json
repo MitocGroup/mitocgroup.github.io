@@ -5,8 +5,10 @@
   "scripts": {
     "install": "node ./bin/www &",
     "start": "node ./bin/www",
-    "test": "./node_modules/mocha/bin/mocha"
+    //"test": "./node_modules/mocha/bin/mocha ./test/*",
+    "test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec ./test/*"
   },
+  after_script: "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
   "engines": {
     "node": "0.12.x",
     "npm": "2.12.x"
@@ -20,7 +22,9 @@
     "morgan": "~1.6.1",
     "serve-favicon": "~2.3.0",
     "stylus": "0.42.3",
-    "mocha": "1.15.1"
+    "coveralls": "2.10.0",
+    "istanbul": "0.3.5",
+    "mocha": "2.0.0"
   }
-
 }
+
