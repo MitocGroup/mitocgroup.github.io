@@ -11,13 +11,6 @@
   "bugs": {
     "url": "https://github.com/MitocGroup/mitocgroup.github.io/issues"
   },
-  "author": {
-    "name": "Eugene Istrati",
-    "email": "eugene@mitocgroup.com",
-    "url": "https://github.com/eistrati"
-  },
-  "contributors": [
-  ],
   "licenses": [
     {
       "type": "MIT",
