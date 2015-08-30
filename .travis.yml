@@ -5,6 +5,10 @@ node_js:
   - '0.11'
   - '0.10'
 
+env:
+  global:
+    - CODACY_PROJECT_TOKEN=f93abfb3437b45da8124952e2d71c564
+
 cache:
   directories:
     - node_modules
