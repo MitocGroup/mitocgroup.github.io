@@ -1,27 +1,22 @@
 language: node_js
 sudo: false
 node_js:
-  - '0.12'
-  - '0.11'
-  - '0.10'
-
-env:
-  global:
-    - CODACY_PROJECT_TOKEN=f93abfb3437b45da8124952e2d71c564
-
+- '0.12'
+- '0.11'
+- '0.10'
 cache:
   directories:
-    - node_modules
-    - bower_components
-    - docs/bower_components
-
+  - node_modules
+  - bower_components
+  - docs/bower_components
 branches:
   only:
-    - master
-    - stage
-    - test
-    - dev
-
+  - master
+  - stage
+  - test
+  - dev
 after_success:
-  - npm run codacy
-  - npm run coveralls
+- npm run codacy
+- npm run coveralls
+dd:
+  secure: gzVA0KO+/aYmdroxopkRY6h3vkjuhI+MgmmH3LpA2kqHEE2jsVWNtFW6rUgbCrtuYmvcDJJoG9KahReqKsOvQ0ARYnFA3A823fU1Ku8yYZJC6nbuqRwtoe3ScoDVRYKYGJN6V8Q7M6uR3xqanbBFQ/NJn1xpTgKskGYs0/hv2dn1RB1/8i8F1IDAbIxoIN/5JbIp4U4QH2Z45YslB9b2O8xiSj8exdPY7mwtEzjb2BkOlcoGOub/2bepMwXXZq6WNHg+7BskEDwFsh3x6OsUR3FtTLIr0JQ6IrmDKu0UBWfsTXI29QimQuby9W3HvscWfE7zf9i3Mt005Ef/oFu29y+LoeBjMJ0O6vxfgnXZ6BmsAolbSgJvAAifrli+IXEW29FE0geL0Lfy5qkbzHaTXF1Hfx+Z3JZIhMwD0RIPxCQnqYAoaKesokjpjI5lApoD1NcSLqMj1uPSWliwo1JsU1pA02eB1yvIJ8D2udQ9QJwjZVn4dA0FiQdf4e4mobAbuEhEXmTPKUPC2MsmAr9qyVIpFi046ift9m96MtCl5CIHLbnvnQNPKzr9RiWkv6nIhSUm2L39AJywnqZqS2oXj6XCvlgyhXX9KP1AKx8g3YQJIH1Wh09+vEWWn+o11qgfVxOuTvQfeer9XHzWN1dvegv4M6Ah5A+1NC0szalAioM=
