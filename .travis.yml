@@ -20,3 +20,5 @@ branches:
 
 after_success:
   - npm run coveralls
+  - npm run codacy
+  
