@@ -1,7 +1,8 @@
 {
   "name": "mitocgroup",
+  "description": "MitocGroup on GitHub",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "homepage": "https://github.com/MitocGroup/mitocgroup.github.io",
   "repository": {
     "type": "git",
