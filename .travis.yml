@@ -19,6 +19,5 @@ branches:
     - dev
 
 after_success:
-  - npm run coveralls
   - npm run codacy
-  
+  - npm run coveralls
