@@ -22,7 +22,9 @@
     "install": "node ./bin/www &",
     "test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec ./test/*",
     "codacy": "cat ./coverage/lcov.info | ./node_modules/.bin/codacy-coverage",
-    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "body-parser": "~1.17.2",
@@ -31,7 +33,8 @@
     "jade": "~1.11.0",
     "morgan": "~1.8.2",
     "serve-favicon": "~2.4.3",
-    "stylus": "~0.52.0"
+    "stylus": "~0.54.3",
+    "snyk": "^1.34.3"
   },
   "devDependencies": {
     "debug": "~2.2.0",
@@ -42,5 +45,6 @@
     "jscs": "~2.1.1",
     "jshint": "~2.8.0",
     "jsinspect": "~0.6.1"
-  }
+  },
+  "snyk": true
 }
